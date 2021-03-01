@@ -6,12 +6,16 @@ class Player
     @name = name
   end
 
-  def choice=(number)
-    @choice = gets.chomp
+  def is_alive?
+    @life != 0
+  end
 
+  def is_dead?
+    @life == 0
+  end
 
-
-
-
-
+  def answerd_wrong
+    @life -= 1
+  end
+    
 end
