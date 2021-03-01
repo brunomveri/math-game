@@ -6,7 +6,7 @@ class Questions
     @sum = @sum1 + @sum2
   end
 
-  def asking(name)
+  def question(name)
     puts "#{name}: What does #{num1} plus #{@num2} equal"
   end
 
