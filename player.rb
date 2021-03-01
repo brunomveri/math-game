@@ -14,7 +14,7 @@ class Player
     @life == 0
   end
 
-  def answerd_wrong
+  def answered_wrong
     @life -= 1
   end
     
