@@ -38,4 +38,13 @@ class Game
         
       puts "---New Turn---"
     
+      if @player1.is_dead?
+        puts "Player 2 wins with a score of #{@player2.life}/3"
+      else
+        puts "Player 1 wins with a score of #{@player1.life}/3"
+      end
+
+      puts "Game Over!"
+      puts "Good bye"
+      
     end
