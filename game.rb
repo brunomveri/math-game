@@ -1,5 +1,5 @@
-require './player'
-require './questions'
+require './player.rb'
+require './questions.rb'
 
 puts "Starting the game..."
 
@@ -13,11 +13,11 @@ class Game
 
   def play
 
-    while @player1.is_alive? && @player2.is_alive do
-      question = Question.new
+    while @player1.is_alive? && @player2.is_alive? do
+      question = Questions.new
 
       print question.asking_question(@current_player.name)
-      print ">>>"
+      print ">>> "
 
       user_input = gets.chomp
 
@@ -37,6 +37,7 @@ class Game
       end
         
       puts "---New Turn---"
+    end
     
       if @player1.is_dead?
         puts "Player 2 wins with a score of #{@player2.life}/3"
@@ -48,3 +49,4 @@ class Game
       puts "Good bye"
       
     end
+end
